@@ -54,7 +54,8 @@
                         <input type="radio" 
                         name="user_type" 
                         id="free"
-                        value="Free">
+                        value="Free"
+                        checked>
                 </div>
                 <div class="col-sm-3">
                     <h3>Silver Plan</h3>
