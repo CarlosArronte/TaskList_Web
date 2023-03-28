@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('user_type');
             $table->string('payment_status');
-            $table->date('payment_date');
+            $table->date('payment_date')->nullable();
         });
     }
 
