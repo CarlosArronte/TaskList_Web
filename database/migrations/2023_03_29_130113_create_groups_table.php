@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('group_name');
-            $table->integer('user_id');
+            $table->foreignId('user_id')
+                    ->constrained('users')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
         });
     }
 
