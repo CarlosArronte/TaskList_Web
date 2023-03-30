@@ -47,8 +47,8 @@
 
         <x-input-label for="user_type" :value="__('Select your plan')" />
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
+            <div class="row columns-1">
+                <div class=" flex columns-1 plan free">
                     <h3>Free Plan</h3>
                     <h4 class="text-centered">R$0</h4> 
                         <input type="radio" 
@@ -57,7 +57,7 @@
                         value="Free"
                         checked>
                 </div>
-                <div class="col-sm-3">
+                <div class="flex columns-1 plan silver">
                     <h3>Silver Plan</h3>
                     <h4 class="text-centered">R$25/year</h4> 
                         <input type="radio" 
@@ -65,7 +65,7 @@
                         id="silver"
                         value="Silver">
                 </div>
-                <div class="col-sm-3">
+                <div class="flex columns-1 plan gold">
                     <h3>Gold Plan</h3>
                     <h4 class="text-centered">R$50/year</h4> 
                         <input type="radio" 
@@ -73,7 +73,7 @@
                         id="gold"
                         value="Gold">
                 </div>
-                <div class="col-sm-3">
+                <div class="flex columns-1 plan platinum">
                     <h3>Platinum Plan</h3>
                     <h4 class="text-centered">R$100/year</h4> 
                         <input type="radio" 

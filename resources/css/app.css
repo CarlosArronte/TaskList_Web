@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.plan{
+    margin: 10px 0;
+    padding: 1%;
+}
+.plan.free{
+    border: solid 2px #3FFDA6;
+}
+
+.plan.silver{
+    border: solid 2px #C0C0C0;
+}
+
+.plan.gold{
+    border: solid 2px #FFD700;
+}
+
+.plan.platinum{
+    border: solid 2px #000;
+}
