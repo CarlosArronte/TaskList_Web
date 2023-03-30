@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('lastname');
-            $table->string('user_type');
-            $table->string('payment_status');
-            $table->date('payment_date')->nullable();
+        Schema::create('user_type_functions', function (Blueprint $table) {
+            $table->id();
+            $table->string('funtion_name');
+            $table->longText('description');
         });
     }
 
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user_type_functions');
     }
 };

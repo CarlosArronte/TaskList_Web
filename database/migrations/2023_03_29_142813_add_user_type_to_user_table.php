@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('lastname');
-            $table->string('user_type');
-            $table->string('payment_status');
-            $table->date('payment_date')->nullable();
+            $table->foreignId('user_types_id')
+                            ->constrained('user_types')
+                            ->onUpdate('cascade')
+                            ->onDelete('cascade'); 
         });
     }
 
@@ -24,6 +24,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::table('user', function (Blueprint $table) {
+            $table->dropColumn('user_types_id');
+        });
     }
 };
